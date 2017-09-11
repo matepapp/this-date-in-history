@@ -14,6 +14,8 @@
 		097CFC751F6723D500CD1F1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 097CFC731F6723D500CD1F1A /* LaunchScreen.storyboard */; };
 		097CFC801F6723D500CD1F1A /* ThisDateInHistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFC7F1F6723D500CD1F1A /* ThisDateInHistoryTests.swift */; };
 		097CFC8B1F6723D500CD1F1A /* ThisDateInHistoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFC8A1F6723D500CD1F1A /* ThisDateInHistoryUITests.swift */; };
+		097CFC9C1F67352600CD1F1A /* SwifterSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 097CFC9A1F67351300CD1F1A /* SwifterSwift.framework */; };
+		097CFC9D1F67352600CD1F1A /* SwifterSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 097CFC9A1F67351300CD1F1A /* SwifterSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		097CFC9E1F67352700CD1F1A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				097CFC9D1F67352600CD1F1A /* SwifterSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		097CFC671F6723D500CD1F1A /* ThisDateInHistory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThisDateInHistory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		097CFC6A1F6723D500CD1F1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +63,7 @@
 		097CFC861F6723D500CD1F1A /* ThisDateInHistoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThisDateInHistoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		097CFC8A1F6723D500CD1F1A /* ThisDateInHistoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisDateInHistoryUITests.swift; sourceTree = "<group>"; };
 		097CFC8C1F6723D500CD1F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		097CFC9A1F67351300CD1F1A /* SwifterSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwifterSwift.framework; path = Carthage/Build/iOS/SwifterSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				097CFC9C1F67352600CD1F1A /* SwifterSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +147,7 @@
 		097CFC981F6723E900CD1F1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				097CFC9A1F67351300CD1F1A /* SwifterSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,7 +162,9 @@
 				097CFC631F6723D500CD1F1A /* Sources */,
 				097CFC641F6723D500CD1F1A /* Frameworks */,
 				097CFC651F6723D500CD1F1A /* Resources */,
+				097CFC9E1F67352700CD1F1A /* Embed Frameworks */,
 				097CFC991F67263200CD1F1A /* ShellScript */,
+				097CFC9F1F67354F00CD1F1A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -279,6 +300,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		097CFC9F1F67354F00CD1F1A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwifterSwift.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwifterSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -441,6 +477,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E6SA5UUA26;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ThisDateInHistory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matepapp.ThisDateInHistory;
@@ -454,6 +494,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E6SA5UUA26;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ThisDateInHistory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matepapp.ThisDateInHistory;
