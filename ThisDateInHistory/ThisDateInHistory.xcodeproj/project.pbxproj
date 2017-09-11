@@ -16,6 +16,8 @@
 		097CFC8B1F6723D500CD1F1A /* ThisDateInHistoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFC8A1F6723D500CD1F1A /* ThisDateInHistoryUITests.swift */; };
 		097CFC9C1F67352600CD1F1A /* SwifterSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 097CFC9A1F67351300CD1F1A /* SwifterSwift.framework */; };
 		097CFC9D1F67352600CD1F1A /* SwifterSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 097CFC9A1F67351300CD1F1A /* SwifterSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		097CFCA21F6739A500CD1F1A /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 097CFCA01F6739A000CD1F1A /* ReSwift.framework */; };
+		097CFCA31F6739A500CD1F1A /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 097CFCA01F6739A000CD1F1A /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				097CFC9D1F67352600CD1F1A /* SwifterSwift.framework in Embed Frameworks */,
+				097CFCA31F6739A500CD1F1A /* ReSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +67,7 @@
 		097CFC8A1F6723D500CD1F1A /* ThisDateInHistoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisDateInHistoryUITests.swift; sourceTree = "<group>"; };
 		097CFC8C1F6723D500CD1F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		097CFC9A1F67351300CD1F1A /* SwifterSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwifterSwift.framework; path = Carthage/Build/iOS/SwifterSwift.framework; sourceTree = "<group>"; };
+		097CFCA01F6739A000CD1F1A /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				097CFCA21F6739A500CD1F1A /* ReSwift.framework in Frameworks */,
 				097CFC9C1F67352600CD1F1A /* SwifterSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				097CFC9A1F67351300CD1F1A /* SwifterSwift.framework */,
+				097CFCA01F6739A000CD1F1A /* ReSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -308,9 +314,11 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SwifterSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReSwift.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwifterSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
