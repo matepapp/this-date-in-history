@@ -23,6 +23,10 @@
 		097CFCB61F67EFEF00CD1F1A /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCB51F67EFEF00CD1F1A /* AppRouter.swift */; };
 		097CFCB81F67F12E00CD1F1A /* RoutingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCB71F67F12E00CD1F1A /* RoutingState.swift */; };
 		097CFCBA1F67F1A900CD1F1A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCB91F67F1A900CD1F1A /* Store.swift */; };
+		097CFCBE1F68252E00CD1F1A /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCBD1F68252E00CD1F1A /* EventsViewController.swift */; };
+		097CFCC01F68254E00CD1F1A /* BirthsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCBF1F68254E00CD1F1A /* BirthsViewController.swift */; };
+		097CFCC21F68256600CD1F1A /* DeathsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCC11F68256600CD1F1A /* DeathsViewController.swift */; };
+		097CFCC41F68258700CD1F1A /* DateSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCC31F68258700CD1F1A /* DateSelectorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		097CFCB51F67EFEF00CD1F1A /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		097CFCB71F67F12E00CD1F1A /* RoutingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingState.swift; sourceTree = "<group>"; };
 		097CFCB91F67F1A900CD1F1A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		097CFCBD1F68252E00CD1F1A /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		097CFCBF1F68254E00CD1F1A /* BirthsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthsViewController.swift; sourceTree = "<group>"; };
+		097CFCC11F68256600CD1F1A /* DeathsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathsViewController.swift; sourceTree = "<group>"; };
+		097CFCC31F68258700CD1F1A /* DateSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSelectorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +216,10 @@
 		097CFCA91F67E9EF00CD1F1A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				097CFCBD1F68252E00CD1F1A /* EventsViewController.swift */,
+				097CFCBF1F68254E00CD1F1A /* BirthsViewController.swift */,
+				097CFCC11F68256600CD1F1A /* DeathsViewController.swift */,
+				097CFCC31F68258700CD1F1A /* DateSelectorViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -413,12 +425,16 @@
 			files = (
 				097CFCB81F67F12E00CD1F1A /* RoutingState.swift in Sources */,
 				097CFCAE1F67EAC800CD1F1A /* CollectionDataSource.swift in Sources */,
+				097CFCC01F68254E00CD1F1A /* BirthsViewController.swift in Sources */,
 				097CFCB01F67EB1000CD1F1A /* TableDataSource.swift in Sources */,
 				097CFCBA1F67F1A900CD1F1A /* Store.swift in Sources */,
 				097CFCB61F67EFEF00CD1F1A /* AppRouter.swift in Sources */,
+				097CFCC21F68256600CD1F1A /* DeathsViewController.swift in Sources */,
 				097CFC6B1F6723D500CD1F1A /* AppDelegate.swift in Sources */,
 				097CFCB21F67EC5F00CD1F1A /* AppState.swift in Sources */,
 				097CFCB41F67ECCE00CD1F1A /* AppReducer.swift in Sources */,
+				097CFCC41F68258700CD1F1A /* DateSelectorViewController.swift in Sources */,
+				097CFCBE1F68252E00CD1F1A /* EventsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

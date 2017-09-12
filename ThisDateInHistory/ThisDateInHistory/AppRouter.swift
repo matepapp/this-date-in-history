@@ -19,7 +19,18 @@ enum RoutingDestination: String {
 
 final class AppRouter {
     
+    let tabBarController: UITabBarController
+    
     init(window: UIWindow) {
+        tabBarController = UITabBarController()
+        
+        tabBarController.viewControllers = [
+            EventsViewController(),
+            BirthsViewController(),
+            DeathsViewController(),
+            DateSelectorViewController()
+        ]
+        
+        window.rootViewController = tabBarController
     }
 }
-
