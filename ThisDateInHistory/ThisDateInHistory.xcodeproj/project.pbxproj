@@ -18,6 +18,11 @@
 		097CFCA31F6739A500CD1F1A /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 097CFCA01F6739A000CD1F1A /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		097CFCAE1F67EAC800CD1F1A /* CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCAD1F67EAC800CD1F1A /* CollectionDataSource.swift */; };
 		097CFCB01F67EB1000CD1F1A /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCAF1F67EB1000CD1F1A /* TableDataSource.swift */; };
+		097CFCB21F67EC5F00CD1F1A /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCB11F67EC5F00CD1F1A /* AppState.swift */; };
+		097CFCB41F67ECCE00CD1F1A /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCB31F67ECCE00CD1F1A /* AppReducer.swift */; };
+		097CFCB61F67EFEF00CD1F1A /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCB51F67EFEF00CD1F1A /* AppRouter.swift */; };
+		097CFCB81F67F12E00CD1F1A /* RoutingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCB71F67F12E00CD1F1A /* RoutingState.swift */; };
+		097CFCBA1F67F1A900CD1F1A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097CFCB91F67F1A900CD1F1A /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,11 @@
 		097CFCA01F6739A000CD1F1A /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		097CFCAD1F67EAC800CD1F1A /* CollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDataSource.swift; sourceTree = "<group>"; };
 		097CFCAF1F67EB1000CD1F1A /* TableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
+		097CFCB11F67EC5F00CD1F1A /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		097CFCB31F67ECCE00CD1F1A /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppReducer.swift; path = ThisDateInHistory/Reducer/AppReducer.swift; sourceTree = SOURCE_ROOT; };
+		097CFCB51F67EFEF00CD1F1A /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		097CFCB71F67F12E00CD1F1A /* RoutingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutingState.swift; sourceTree = "<group>"; };
+		097CFCB91F67F1A900CD1F1A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +139,8 @@
 				097CFCA81F67E9EB00CD1F1A /* View */,
 				097CFCA91F67E9EF00CD1F1A /* ViewController */,
 				097CFC6A1F6723D500CD1F1A /* AppDelegate.swift */,
+				097CFCB51F67EFEF00CD1F1A /* AppRouter.swift */,
+				097CFCB91F67F1A900CD1F1A /* Store.swift */,
 			);
 			path = ThisDateInHistory;
 			sourceTree = "<group>";
@@ -171,6 +183,7 @@
 		097CFCA61F67E94000CD1F1A /* Reducer */ = {
 			isa = PBXGroup;
 			children = (
+				097CFCB31F67ECCE00CD1F1A /* AppReducer.swift */,
 			);
 			name = Reducer;
 			path = Reducers;
@@ -179,6 +192,8 @@
 		097CFCA71F67E97900CD1F1A /* State */ = {
 			isa = PBXGroup;
 			children = (
+				097CFCB11F67EC5F00CD1F1A /* AppState.swift */,
+				097CFCB71F67F12E00CD1F1A /* RoutingState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -396,9 +411,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				097CFCB81F67F12E00CD1F1A /* RoutingState.swift in Sources */,
 				097CFCAE1F67EAC800CD1F1A /* CollectionDataSource.swift in Sources */,
 				097CFCB01F67EB1000CD1F1A /* TableDataSource.swift in Sources */,
+				097CFCBA1F67F1A900CD1F1A /* Store.swift in Sources */,
+				097CFCB61F67EFEF00CD1F1A /* AppRouter.swift in Sources */,
 				097CFC6B1F6723D500CD1F1A /* AppDelegate.swift in Sources */,
+				097CFCB21F67EC5F00CD1F1A /* AppState.swift in Sources */,
+				097CFCB41F67ECCE00CD1F1A /* AppReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
