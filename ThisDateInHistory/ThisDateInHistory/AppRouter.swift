@@ -12,15 +12,14 @@ import UIKit
 
 enum RoutingDestination: String {
     case events = "EventsViewController"
+    case births = "BirthsViewController"
+    case deaths = "DeathsViewController"
+    case dateSelector = "DateSelectorViewController"
 }
 
 final class AppRouter {
     
-//    let navigationController: UINavigationController
-    
     init(window: UIWindow) {
-//        navigationController = UINavigationController()
-//        window.rootViewController = navigationController
     }
 }
 
