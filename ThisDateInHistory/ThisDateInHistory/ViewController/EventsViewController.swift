@@ -9,11 +9,16 @@
 import UIKit
 
 class EventsViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         self.view.backgroundColor = .blue
+        self.title = "Events"
         self.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 0)
     }
 

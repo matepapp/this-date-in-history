@@ -14,6 +14,7 @@ class DateSelectorViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = .red
+        self.title = "Date Selector"
         self.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 3)
     }
 }

@@ -12,14 +12,24 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var appRouter: AppRouter?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         window.makeKeyAndVisible()
-        appRouter = AppRouter(window: window)
+        
+        let tabBarController = TabBarController()
+        let events = EventsViewController()
+        let births = BirthsViewController()
+        let deaths = DeathsViewController()
+        deaths.customize()
+        let dateSelector = DateSelectorViewController()
+        
+        tabBarController.viewControllers = [events, births, deaths, dateSelector]
+        tabBarController.selectedViewController = events
+        
+        window.rootViewController = tabBarController
         
         return true
     }

@@ -15,5 +15,6 @@ class BirthsViewController: UIViewController {
 
         self.view.backgroundColor = .green
         self.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        self.tabBarItem.title = "Births"
     }
 }
